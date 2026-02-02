@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline Music</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img class="toggle-btn" src="/icons/queue_music_list_btn.svg" alt="" />
+    <div class="playlist-container">
+      <div class="search-wrapper">
+        <img src="/icons/search.svg" alt="" />
+        <input class="search-bar" type="text" placeholder="Search" />
+      </div>
+      <ul class="playlist"></ul>
+    </div>
+
+    <div class="player-container">
+      <div>
+        <input
+          class="song-upload"
+          type="file"
+          multiple
+          webkitdirectory
+          hidden
+        />
+        <button class="select-btn">
+          <img src="/icons/folder_open.svg" alt="" />
+          <span>Select folder</span>
+        </button>
+      </div>
+
+      <img class="album-art" src="/img/demo-img.jpeg" alt="" />
+
+      <div class="song-details">
+        <h2 class="song-name"></h2>
+      </div>
+
+      <div class="audio-elements">
+        <audio id="play-audio" src=""></audio>
+
+        <div class="progress-elements">
+          <span class="current-duration">00:00</span>
+          <input type="range" value="" class="progress-bar" />
+          <span class="total-duration">00:00</span>
+        </div>
+
+        <div class="controls-btns">
+          <button title="Shuffle " class="shuffle-btn">
+            <img src="/icons/shuffle_off.svg" alt="" />
+          </button>
+          <button class="previous-btn">
+            <img src="/icons/skip_previous_btn.svg" alt="" />
+          </button>
+          <button class="play-btn">
+            <img src="/icons/play_circle_btn.svg" alt="" />
+          </button>
+          <button class="next-btn">
+            <img src="/icons/skip_next_btn.svg" alt="" />
+          </button>
+          <button title="Repeat" class="repeat-btn">
+            <img src="/icons/repeat_off.svg" alt="" />
+          </button>
+        </div>
+        <div class="volume-elements">
+          <img src="/icons/volume_mute.svg" alt="" />
+          <input
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+          />
+          <img src="/icons/sound_on.svg" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>

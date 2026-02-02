@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(54, 53, 53);
+  gap: 10px;
+}
+
+.player-container {
+  height: 90vh;
+  /* min-width: 400px; */
+  width: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  box-shadow: 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  color: white;
+  margin-top: 5vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.select-btn {
+  padding: 5px;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
+.album-art {
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 12px 12px 102px rgb(224, 218, 218);
+  border: 25px solid rgba(247, 243, 243, 0.845);
+  margin: 20px 0;
+  animation: rotation 10s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.song-details {
+  color: black;
+  overflow-wrap: break-word;
+  text-shadow: 1px -1px white;
+}
+
+.audio-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.progress-elements span {
+  font-size: 12px;
+}
+.volume-slider {
+  width: 60%;
+}
+.progress-bar,
+.volume-slider {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+.volume-slider::-webkit-slider-runnable-track,
+.progress-bar::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  background: #494545e9;
+  border-radius: 5px;
+}
+
+.volume-slider::-webkit-slider-thumb,
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #343233;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  margin-top: -5px;
+}
+
+.controls-btns button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.controls-btns button {
+  height: 30px;
+}
+
+.volume-elements {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-wrapper {
+  display: none;
+  align-items: center;
+  padding: 10px 15px;
+  margin-top: 30px;
+  border-radius: 189px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.search-bar {
+  width: 100%;
+  background: transparent;
+  text-align: left;
+  padding: 6px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.controls-btns .play-btn img {
+  height: 40px;
+  width: 40px;
+}
+
+.playlist {
+  display: none;
+  width: 50vw;
+  overflow: scroll;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  max-height: 85vh;
+  overflow-wrap: break-word;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.playlist li {
+  border: 1px dashed rgba(66, 64, 64, 0.749);
+  padding: 10px;
+  text-align: left;
+  color: rgba(240, 248, 255, 0.714);
+  overflow-wrap: break-word;
+}
+
+.playlist li:hover {
+  background-color: aliceblue;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: -1px -2px 600px rgb(255, 255, 255);
+  border: 1px solid rgba(28, 27, 27, 0.845);
+}
+
+.toggle-btn {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  body {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .player-container {
+    width: 300px;
+  }
+  .playlist-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: #3f3f3fe7;
+    padding: 10px;
+    font-size: 13px;
+  }
+  .toggle-btn {
+    display: block;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+  }
+
+  .active {
+    display: block;
+  }
+}
