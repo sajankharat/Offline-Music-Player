@@ -3,7 +3,7 @@
 A lightweight, web-based offline music player built using **HTML, CSS, and Vanilla JavaScript**. This application allows users to play local MP3 files by selecting a folder from their device. It features a modern UI, responsive design, and essential playback controls.
 
 ## 🚀 Live Demo
-[Click here to view the project](#) 
+[https://offline-music-player-online.netlify.app/](#) 
 
 ## ✨ Features
 
@@ -42,7 +42,16 @@ A lightweight, web-based offline music player built using **HTML, CSS, and Vanil
 
 ## 📸 Screenshots
 
-*(Add screenshots of your player here)*
+Music Player Desktop View
+<img width="633" height="913" alt="Screenshot 2026-02-02 204547" src="https://github.com/user-attachments/assets/0dc1095e-8388-47a3-a0e9-ac19a2617f7d" />
+<img width="1583" height="855" alt="Screenshot 2026-02-02 204621" src="https://github.com/user-attachments/assets/02496641-4d58-4284-ab48-6d1f210c952c" />
+
+
+Mobile View
+
+<img width="622" height="869" alt="Screenshot 2026-02-02 204701" src="https://github.com/user-attachments/assets/3bd4bee6-97a6-42ff-a78f-c9a12f9c9297" />
+<img width="604" height="862" alt="Screenshot 2026-02-02 204738" src="https://github.com/user-attachments/assets/6c49ffaa-fcce-41de-9f11-89c0b1be4a94" />
+
 
 ## 🤝 Contributing
 
@@ -52,4 +61,5 @@ Feel free to fork this project and add new features like:
 - Custom playlists.
 
 ---
+
 *Made with ❤️ and JavaScript.*
